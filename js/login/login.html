@@ -1,0 +1,10 @@
+﻿<form class="login-form" data-ng-submit="vm.submitForm()">
+    <label for="email__input" class="sr-only">EMAIL</label>
+    <input type="text" id="email__input" class="form-control" placeholder="EMAIL" required autofocus data-ng-model="postCtrl.inputData.username">
+    <label for="inputPassword" class="sr-only">PASSWORD</label>
+    <input type="password" id="inputPassword" class="form-control" placeholder="PASSWORD" required data-ng-model="postCtrl.inputData.password">
+    <br>
+    <div class="alert alert-danger" role="alert" data-ng-show="errorMsg">{{errorMsg}}</div>
+    <button class="btn btn-lg btn-primary btn-block" type="submit">NEXT</button>
+
+</form>
