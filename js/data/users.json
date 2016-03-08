@@ -2,11 +2,13 @@
     {
         "email": "masum@gmail.com",
         "name": "Masum Ahammed",
-        "password": 123
+        "password": "123",
+        "image": "../../img/jeff.png"
     },
     {
         "email": "rick@gmail.com",
         "name": "Rick",
-        "password": 123
+        "password": "123",
+        "image": "../../img/jeff.png"
     }
 ]

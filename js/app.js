@@ -25,6 +25,11 @@
                      controller: 'appsController',
                      controllerAs: 'vm'
                  }).
+                when('/lock', {
+                    templateUrl: 'js/login/lock-screen.html',
+                    controller: 'lockController',
+                    controllerAs: 'vm'
+                }).
                 otherwise({
                     redirectTo: '/'
                 });

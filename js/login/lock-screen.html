@@ -1,0 +1,18 @@
+﻿<form class="lock-form" name="loginForm" data-ng-submit="vm.submitForm(loginForm.$valid)">
+    <div class="lock-header">
+        <img  src="{{vm.user.image}}" alt="user" />
+        <br />
+        <label>{{vm.user.name}}</label>
+        <br/>
+        <span>{{vm.user.email}}</span>
+    </div>
+    <div>
+        <label for="inputPassword" class="sr-only">PASSWORD</label>
+        <input type="password" id="inputPassword" name="password" class="form-control" placeholder="PASSWORD" required data-ng-model="vm.password">
+        <br>
+        <div class="alert alert-danger" role="alert" data-ng-if="vm.errorMsg">{{vm.errorMsg}}</div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign In</button>
+    </div>
+
+
+</form>
