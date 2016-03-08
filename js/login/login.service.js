@@ -19,7 +19,7 @@
         function login(email, password) {
             var deferred = $q.defer();
 
-            $http.get('js/data/data.json').success(function (data) {
+            $http.get('js/data/users.json').success(function (data) {
                 var user = data.find(function (user) {
                     return user.email == email && user.password == password
                 });

@@ -20,7 +20,11 @@
                     controller: 'loginController',
                     controllerAs: 'vm'
                 }).
-
+                 when('/apps', {
+                     templateUrl: 'js/apps/apps.html',
+                     controller: 'appsController',
+                     controllerAs: 'vm'
+                 }).
                 otherwise({
                     redirectTo: '/'
                 });

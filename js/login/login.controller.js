@@ -5,25 +5,24 @@
         .module('app')
         .controller('loginController', loginController);
 
-    loginController.$inject = ['loginService', '$animate', '$timeout'];
+    loginController.$inject = ['loginService', '$animate', '$location'];
 
-    function loginController(loginService, $animate, $timeout) {
+    function loginController(loginService, $animate, $location) {
         /* jshint validthis:true */
         var vm = this;
         vm.title = 'loginController';
 
         vm.submitForm = function (isValid) {
             if (!isValid) {
-                shakeForm();
-                return false;
+               return shakeForm();
             }
 
             loginService.login(vm.email, vm.password).then(function (user) {
                 if (!user) {
                     vm.errorMsg = 'Login failed.';
-                    shakeForm();
+                   return shakeForm();
                 }
-              
+                $location.path('/apps');
             });
         }
 
@@ -33,6 +32,7 @@
             $animate.addClass(element, 'shake', function () {
                 $animate.removeClass(element, 'shake');
             });
+            return false;
         }
 
        

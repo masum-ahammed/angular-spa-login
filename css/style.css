@@ -90,6 +90,63 @@
   animation: shake 400ms ease-in-out;
 }
 
-.message {
-  margin-top: 60px;
+.app-container{
+    max-width:500px;
+    text-align:center;
+    margin:0 auto;
+
+}
+.app {
+  
+  background:url(../img/apps.png) no-repeat;
+ 
+  width:130px;
+  border: #eee solid 1px;
+  margin: 10px;
+  padding:10px 0px;
+  font-weight:bold;
+}
+
+.app > .app-box {
+    height:82px;
+  
+}
+
+.app.interop{
+     background-position:30px 30px;
+     font-weight:bold;
+}
+.app.phc-hub{
+     
+     background-position:-105px 30px;
+    
+}
+.app.immu-cast{
+     background-position:-240px 30px;
+     
+}
+.app.sentinel{
+     background-position:-370px 30px;
+     text-transform:uppercase;
+     
+}
+.app.smart{
+     background-position:-520px 30px;
+     
+}
+.app.imms-link{
+     background-position:-685px 30px;
+     font-weight:normal;
+}
+.app.my-ir{
+     background-position:-840px 30px;
+    
+}
+.app.oms{
+     background-position:-975px 30px;
+    
+}
+.app.voms{
+     background-position:-1110px 30px;
+
 }
