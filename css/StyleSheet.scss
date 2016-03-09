@@ -16,6 +16,7 @@ $baseColor: #00479F;
         transform: translateX($px);
 }
 
+
 .login-form, .lock-form {
     max-width: 300px;
     margin: 0 auto;
@@ -75,33 +76,30 @@ $baseColor: #00479F;
 
 @keyframes shake {
     0% {
-        -webkit-transform: translateX(0);
-        transform: translateX(0);
+       @include transform-x(0);
     }
 
     12.5% {
-        -webkit-transform: translateX(-6px) rotateY(-5deg);
-        transform: translateX(-6px) rotateY(-5deg);
+        @include transform(-6px,-5deg);
+        
     }
 
     37.5% {
-        -webkit-transform: translateX(5px) rotateY(4deg);
-        transform: translateX(5px) rotateY(4deg);
+         @include transform(5px,-4deg);
+      
     }
 
     62.5% {
-        -webkit-transform: translateX(-3px) rotateY(-2deg);
-        transform: translateX(-3px) rotateY(-2deg);
+         @include transform(-3px,-2deg);
     }
 
     87.5% {
-        -webkit-transform: translateX(2px) rotateY(1deg);
-        transform: translateX(2px) rotateY(1deg);
+         @include transform(2px,1deg);
+        
     }
 
     100% {
-        -webkit-transform: translateX(0);
-        transform: translateX(0);
+         @include transform-x(0);
     }
 }
 
