@@ -1,10 +1,23 @@
 ﻿<form class="login-form" name="loginForm" data-ng-submit="vm.submitForm(loginForm.$valid)">
-    <label for="email__input" class="sr-only">EMAIL</label>
-    <input type="text" id="email__input" name="email" class="form-control" placeholder="EMAIL" required autofocus data-ng-model="vm.email">
-    <label for="inputPassword" class="sr-only">PASSWORD</label>
-    <input type="password" id="inputPassword" name="password" class="form-control" placeholder="PASSWORD" required data-ng-model="vm.password">
+    <!--<label for="email__input" class="sr-only">EMAIL</label>
+    <input type="text" id="email__input" name="email" class="form-control rounded" placeholder="EMAIL" required autofocus data-ng-model="vm.email">-->
+    <div class="form-group form-group-lg">
+        
+        <div style="position:relative">
+            <span class="user-icon"><i class="fa fa-user"></i></span>
+            <input class="form-control" type="text" id="email__input" placeholder="EMAIL" ng-required data-ng-model="vm.email">
+        </div>
+    </div>
+    <div class="form-group form-group-lg">
+
+        <div style="position:relative">
+            <span class="lock-icon"><i class="fa fa-lock"></i></span>
+            <input class="form-control" type="text" id="inputPassword" placeholder="PASSWORD" ng-required data-ng-model="vm.password">
+        </div>
+    </div>
+  
     <br>
     <div class="alert alert-danger" role="alert" data-ng-if="vm.errorMsg">{{vm.errorMsg}}</div>
-    <button class="btn btn-lg btn-primary btn-block" type="submit">NEXT</button>
+    <button class="btn btn-lg btn-primary btn-block rounded" type="submit">NEXT</button>
 
 </form>

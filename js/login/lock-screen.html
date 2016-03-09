@@ -7,11 +7,16 @@
         <span>{{vm.user.email}}</span>
     </div>
     <div>
-        <label for="inputPassword" class="sr-only">PASSWORD</label>
-        <input type="password" id="inputPassword" name="password" class="form-control" placeholder="PASSWORD" required data-ng-model="vm.password">
-        <br>
+        <div class="form-group form-group-lg">
+
+            <div style="position:relative">
+                <span class="lock-icon"><i class="fa fa-lock"></i></span>
+                <input class="form-control" type="text" id="inputPassword" placeholder="PASSWORD" ng-required data-ng-model="vm.password">
+            </div>
+        </div>
+         <br>
         <div class="alert alert-danger" role="alert" data-ng-if="vm.errorMsg">{{vm.errorMsg}}</div>
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign In</button>
+        <button class="btn btn-lg btn-primary btn-block rounded" type="submit">Sign In</button>
     </div>
 
 
